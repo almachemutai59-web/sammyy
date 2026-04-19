@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Sammy</title>
+    <style>
+        body { background-color: #fce4ec; font-family: 'Helvetica', sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; text-align: center; }
+        .card { background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); max-width: 600px; width: 90%; min-height: 300px; display: flex; flex-direction: column; justify-content: center; }
+        h1 { color: #ad1457; font-size: 2.5rem; }
+        p { color: #444; line-height: 1.6; font-size: 1.1rem; text-align: left; }
+        .big-text { font-size: 5rem; font-weight: bold; color: #880e4f; }
+        button { background-color: #ad1457; color: white; border: none; padding: 10px 20px; border-radius: 10px; cursor: pointer; margin-top: 20px; font-size: 1rem; }
+        .hidden { display: none; }
+    </style>
+</head>
+<body>
+
+    <div id="page1" class="card">
+        <h1>I love you, Sammy.</h1>
+        <button onclick="nextPage(2)">Next →</button>
+    </div>
+
+    <div id="page2" class="card hidden">
+        <p>
+            Sammy, I want you to take a deep breath and listen to me. I know life feels incredibly heavy right now, and I know how much it hurts when the people who are supposed to support you make you feel like a victim instead. Being shouted at doesn't define your value, and their words don't change the truth of who you are. You are resilient, you are kind, and you have so much light inside you, even if it feels a bit dimmed right now. Never, ever feel worthless. The way you are being treated reflects their stress or mistakes, not your character. You are a gift to the people around you, especially to me. When you feel like the world is crashing down, remember that I am in your corner. I love you more than words can properly explain. You are enough exactly as you are, without changing a single thing. You deserve peace, you deserve to be heard without being yelled at, and you deserve to feel safe. Keep your head up, Sammy. This darkness is temporary, but my love and support for you are permanent. You are stronger than you realize, and you are never alone in this. I love you so much.
+        </p>
+        <button onclick="nextPage(3)">Next →</button>
+    </div>
+
+    <div id="page3" class="card hidden">
+        <div class="big-text">I LOVE YOU</div>
+    </div>
+
+    <script>
+        function nextPage(num) {
+            document.querySelectorAll('.card').forEach(c => c.classList.add('hidden'));
+            document.getElementById('page' + num).classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
